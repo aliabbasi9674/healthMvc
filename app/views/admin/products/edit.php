@@ -7,7 +7,7 @@
 
         <div class="col-md-7 mx-auto">
 
-            <h5 class="text-center text-primary my-4">ویرایش کالای پزشکی</h5>
+            <h5 class="text-center text-primary my-4">ویرایش کالای پزشکی <?php echo $data['name']; ?></h5>
             <div class="card">
                 <div class="card-body">
                     <?php flash('product_success') ?>

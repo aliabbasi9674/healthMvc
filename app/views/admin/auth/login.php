@@ -1,7 +1,4 @@
 <?php require APPROOT.'/views/includes/admin/header.php' ?>
-<?php
-$csrf_token = generateCSRFToken();
-?>
 
 <div class="container">
     <div class="row mt-5">
@@ -24,7 +21,6 @@ $csrf_token = generateCSRFToken();
                             <input type="password" name="password" class="form-control <?php echo (!empty($data['pass_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['password']; ?>">
                             <span class="invalid-feedback"> <?php echo $data['pass_error'] ?> </span>
                         </div>
-                        <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>">
 
                         <div class="text-center my-4">
                             <button class="btn btn-dark" type="submit"> ورود </button>
