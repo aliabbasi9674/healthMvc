@@ -6,7 +6,7 @@
 
 
     <main role="main">
-        <div class="m-5">
+        <div class="mt-5">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -41,7 +41,7 @@
 
         <section class="section-products">
             <div class="container">
-                <div class="row justify-content-center text-center">
+                <div class="row justify-content-center text-center bg-title-product">
                     <div class="col-md-8 col-lg-6">
                         <div class="header">
                             <h3>محصولات</h3>
@@ -68,12 +68,10 @@
                     <!-- Single Product -->
                     <?php foreach ($data['products'] as $product) : ?>
                     <div class="col-md-6 col-lg-4 col-xl-3">
+                        <a href="<?php echo URLROOT ?>/cart/show/<?php echo $product->id ?>">
                         <div class="single-product">
-                            <div class="part-1" style="background: url(<?php echo URLROOT; ?>/upload/image/<?php echo $product->image ?>) no-repeat center; background-size: cover;">
+                            <div class="part-1" style="border: 1px solid #ddd;background: url(<?php echo URLROOT; ?>/upload/image/<?php echo $product->image ?>) no-repeat center; background-size: cover;">
                                <?php echo $product->discount==1  ? '<span class="discount">'.DISCOUNT.'% تخفیف</span>' :  "" ;  ?>
-                                <ul>
-                                    <li><a href="<?php echo URLROOT ?>/cart/show/<?php echo $product->id ?>" > خرید محصول </a></li>
-                                </ul>
                             </div>
                             <div class="part-2">
                                 <h3 class="product-title"><?php echo $product->name?></h3>
@@ -81,6 +79,7 @@
                                 <h4 class="product-price">  <?php echo price($product)?> تومان </h4>
                             </div>
                         </div>
+                        </a>
                     </div>
                     <?php endforeach; ?>
                 </div>

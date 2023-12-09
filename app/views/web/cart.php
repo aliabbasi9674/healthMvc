@@ -6,11 +6,14 @@
 
 
     <main role="main">
-        <div class="row my-5">
-            <div class="col-md-6">
-                <p class="text-right">خرید شما</p>
+        <p class="text-right my-1">خرید شما</p>
+        <div class="container">
+            <div class="text-center">
+                <img src="<?php echo URLROOT; ?>/upload/image/<?php echo $data['product']->image ?>" alt="<?php echo $data['product']->name ?>" style="width: 350px;">
             </div>
         </div>
+
+
         <?php flash('order_message') ?>
         <?php if (isset($data['product'])) : ?>
             <div class="table-responsive ">
