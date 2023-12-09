@@ -28,6 +28,9 @@ class Orders extends Controller
 
             //validate token
             if (!empty($_POST['csrf_token']) && hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+                //delete token
+                unset($_SESSION['csrf_tokens']);
+
                 // Validate Data
                 if (empty($data['phone'])) {
                     $data['phone_error'] = 'فیلد نام شماره همراه الزامی است';
