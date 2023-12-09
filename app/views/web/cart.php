@@ -31,7 +31,7 @@
                         <td><?php echo $data['product']->name ?></td>
                         <td><?php echo $data['product']->code ?></td>
                         <td><?php echo price($data['product']) ?> تومان</td>
-                        <td><?php echo $data['product']->discount == 1 ? "<span>✅</span>" : "<span>✖️</span>" ?></td>
+                        <td><?php echo $data['product']->discount == 1 ? "<span> ✅ (".DISCOUNT." درصد)</span>" : "<span>✖️</span>" ?></td>
                     </tr>
                     </tbody>
                 </table>
@@ -61,8 +61,8 @@
                 <input type="hidden" name="product_id" value="<?php echo $data['product']->id ?>">
                 <input type="hidden" name="csrf_token" value="<?php echo csrf_token(); ?>">
                 <div class="text-center my-4">
-                    <a class="btn btn-dark" href="<?php echo URLROOT; ?>"> بازگشت</a>
-                    <button type="submit" class="btn btn-success" href=""> خرید کالا ها</button>
+                    <a class="btn btn-dark float-right" href="<?php echo URLROOT; ?>"> بازگشت</a>
+                    <button type="submit" class="btn btn-success float-left" href=""> خرید کالا ها</button>
                 </div>
             </form>
         <?php else: ?>
