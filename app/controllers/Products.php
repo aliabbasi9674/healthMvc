@@ -32,7 +32,7 @@ class Products extends Controller
                 <div class="single-product">
                     <div class="part-1"
                          style="background: url(<?php echo URLROOT; ?>/upload/image/<?php echo $product->image; ?>) no-repeat center; background-size: cover;">
-                        <?php echo $product->discount == 1 ? '<span class="discount">' . DISCOUNT . '% off</span>' : ""; ?>
+                        <?php echo $product->discount == 1 ? '<span class="discount">' . DISCOUNT . '% تخفیف</span>' : ""; ?>
                         <ul>
                             <li><a href="<?php echo URLROOT; ?>/cart/show/<?php echo $product->id; ?>"> خرید محصول</a></li>
                         </ul>
