@@ -42,7 +42,7 @@
                                 <label for="phone"> شماره همراه <sup class="text-danger">*</sup> </label>
                             <input type="tel" name="phone"
                                    class="form-control <?php echo (!empty($data['phone_error'])) ? 'is-invalid' : ''; ?>">
-                            <div class="invalid-feedback"> <?php echo $data['phone_error'] ?> </div>
+                            <div class="invalid-feedback"> <?php echo !empty($data['phone_error']) ?  $data['phone_error'] : "" ?> </div>
                         </div>
 
                     </div>
@@ -51,11 +51,12 @@
                             <label for="code"> کد محصول <sup class="text-danger">*</sup> </label>
                             <input type="code" name="code"
                                    class="form-control <?php echo (!empty($data['code_error'])) ? 'is-invalid' : ''; ?>">
-                            <span class="invalid-feedback"> <?php echo $data['code_error'] ?> </span>
+                            <span class="invalid-feedback"> <?php echo !empty($data['code_error']) ? $data['code_error'] : "" ?> </span>
                         </div>
                     </div>
                 </div>
                 <input type="hidden" name="product_id" value="<?php echo $data['product']->id ?>">
+                <input type="hidden" name="csrf_token" value="<?php echo csrf_token(); ?>">
                 <div class="text-center my-4">
                     <a class="btn btn-dark" href="<?php echo URLROOT; ?>"> بازگشت</a>
                     <button type="submit" class="btn btn-success" href=""> خرید کالا ها</button>
