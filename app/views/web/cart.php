@@ -27,7 +27,7 @@
                     <tr>
                         <td><?php echo $data['product']->name ?></td>
                         <td><?php echo $data['product']->code ?></td>
-                        <td><?php echo number_format($data['product']->price) ?></td>
+                        <td><?php echo price($data['product']) ?> تومان</td>
                         <td><?php echo $data['product']->discount == 1 ? "<span>✅</span>" : "<span>✖️</span>" ?></td>
                     </tr>
                     </tbody>

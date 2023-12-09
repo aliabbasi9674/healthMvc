@@ -14,4 +14,4 @@ define('URLROOT','http://127.0.0.1/healthMvc');
 
 //site Name
 define('SITENAME','سلامت هوشمند');
-define('DISCOUNT',15);
+define('DISCOUNT',10);
